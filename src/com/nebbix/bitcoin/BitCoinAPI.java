@@ -44,4 +44,13 @@ public class BitCoinAPI
         return response.getBody().getObject();
     }
 
+    public static JSONObject createBtcWalletAddress(JSONObject header, JSONObject data) throws UnirestException
+    {
+        HttpResponse<JsonNode> response = Unirest.post("https://api.nebbix.com/userApi/wallet/create_address")
+                .header("user-access-token", header.getString("user-access-token"))
+                .header("client-id", header.getString("client-id"))
+                .body(data)
+                .asJson();
+        return response.getBody().getObject();
+    }
 }
