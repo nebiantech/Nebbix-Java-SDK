@@ -26,11 +26,22 @@ public class BitCoinAPI
 {
     public static JSONObject sendBtc(JSONObject header, JSONObject data) throws UnirestException
     {
-        HttpResponse<JsonNode> response = Unirest.post("http://httpbin.org/post")
+        HttpResponse<JsonNode> response = Unirest.post("https://api.nebbix.com/userApi/wallet/send")
                 .header("user-access-token", header.getString("user-access-token"))
                 .header("client-id", header.getString("client-id"))
                 .body(data)
                 .asJson();
         return response.getBody().getObject();
     }
+
+    public static JSONObject createBtcWallet(JSONObject header, JSONObject data) throws UnirestException
+    {
+        HttpResponse<JsonNode> response = Unirest.post("https://api.nebbix.com/userApi/wallet/create")
+                .header("user-access-token", header.getString("user-access-token"))
+                .header("client-id", header.getString("client-id"))
+                .body(data)
+                .asJson();
+        return response.getBody().getObject();
+    }
+
 }
