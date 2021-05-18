@@ -1,5 +1,3 @@
-package com.nebbix.api.transaction;
-
 /*
  * Copyright (c) 2018, Xyneex Technologies. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
@@ -11,19 +9,21 @@ package com.nebbix.api.transaction;
  * or visit www.xyneex.com if you need additional information or have any
  * questions.
  */
+package com.nebbix.api.wallets;
+
 /**
  *
  * @author Jevison7x
- * @since May 1, 2021 12:56:00 PM
+ * @since May 1, 2021 1:23:24 PM
  */
-public class TransactionResponse
+public class WalletBalance
 {
     private boolean success;
-    private ResponseData responseData;
+    private double data;
     private String message;
     private String ref;
 
-    public TransactionResponse()
+    public WalletBalance()
     {
     }
 
@@ -37,14 +37,14 @@ public class TransactionResponse
         this.success = success;
     }
 
-    public ResponseData getResponseData()
+    public double getData()
     {
-        return responseData;
+        return data;
     }
 
-    public void setResponseData(ResponseData responseData)
+    public void setData(double data)
     {
-        this.responseData = responseData;
+        this.data = data;
     }
 
     public String getMessage()

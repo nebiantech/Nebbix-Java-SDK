@@ -9,7 +9,7 @@
  * or visit www.xyneex.com if you need additional information or have any
  * questions.
  */
-package com.nebbix.api.transaction;
+package com.nebbix.api.transactions;
 
 /**
  *

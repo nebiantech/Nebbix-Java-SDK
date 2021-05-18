@@ -1,4 +1,4 @@
-package com.nebbix.api.transaction;
+package com.nebbix.api.transactions;
 
 /*
  * Copyright (c) 2018, Xyneex Technologies. All rights reserved.

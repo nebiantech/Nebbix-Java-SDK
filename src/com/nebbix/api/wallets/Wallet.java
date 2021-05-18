@@ -9,7 +9,7 @@
  * or visit www.xyneex.com if you need additional information or have any
  * questions.
  */
-package com.nebbix.api;
+package com.nebbix.api.wallets;
 
 import java.sql.Timestamp;
 
